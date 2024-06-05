@@ -1,6 +1,7 @@
 /// Return `true` if `n` is even, `false` otherwise.
 fn is_even(n: u32) -> bool {
-    todo!()
+    // I wonder if we stopped teaching modulo - this is the classic modulo exercise:
+    n % 2 == 0
 }
 
 #[cfg(test)]
