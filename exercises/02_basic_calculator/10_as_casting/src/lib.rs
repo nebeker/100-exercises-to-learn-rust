@@ -25,6 +25,7 @@ mod tests {
         // but that would defeat the purpose of the exercise. Instead, use a genuine
         // `i8` value that is equivalent to `255` when converted from `u8`.
         let y: i8 = -1;
+        //OK, this one takes me back...
 
         assert_eq!(x, y);
     }
