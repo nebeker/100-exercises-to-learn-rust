@@ -3,6 +3,9 @@
 //   Change the existing implementation of `Ticket`'s accessor methods take a reference
 //   to `self` as an argument, rather than taking ownership of it.
 
+//What did we learn? Was there an expect intermediate step where the accessor would
+// own the struct?
+
 pub struct Ticket {
     title: String,
     description: String,
@@ -34,16 +37,16 @@ impl Ticket {
         }
     }
 
-    pub fn title(self) -> String {
-        self.title
+    pub fn title(&self) -> String {
+        self.title.clone()
     }
 
-    pub fn description(self) -> String {
-        self.description
+    pub fn description(&self) -> String {
+        self.description.clone()
     }
 
-    pub fn status(self) -> String {
-        self.status
+    pub fn status(&self) -> String {
+        self.status.clone()
     }
 }
 
