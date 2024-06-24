@@ -1,8 +1,10 @@
 // We need some more machinery to write a proper exercise for destructors.
 // We'll pick the concept up again in a later chapter after covering traits and
 // interior mutability.
+
+//Could we not introduce just yet, then?
 fn outro() -> &'static str {
-    "I have a basic understanding of __!"
+    "I have a basic understanding of destructors!"
 }
 
 #[cfg(test)]
