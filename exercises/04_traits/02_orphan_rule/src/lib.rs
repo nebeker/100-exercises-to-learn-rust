@@ -4,8 +4,13 @@
 //  Look at the compiler error to get familiar with what it looks like.
 //  Then delete the code below and move on to the next exercise.
 
-impl PartialEq for u32 {
+/// Custom type, just for fun
+struct MyType {
+    my_number: u32,
+}
+
+impl PartialEq for MyType {
     fn eq(&self, _other: &Self) -> bool {
-        todo!()
+        self.my_number == _other.my_number
     }
 }
