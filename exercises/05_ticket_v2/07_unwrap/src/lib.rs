@@ -1,8 +1,17 @@
-// TODO: `easy_ticket` should panic when the title is invalid.
+// TODO: `easy_ticket` shouldn't panic when the title is invalid.
 //   When the description is invalid, instead, it should use a default description:
 //   "Description not provided".
+
+//So is panicking a good or a bad thing...?
+
 fn easy_ticket(title: String, description: String, status: Status) -> Ticket {
-    todo!()
+    let validated_description: String;
+    if description.is_empty() {
+        validated_description = String::from("Description not provided");
+    } else {
+        validated_description = description
+    }
+    Ticket::new(title, validated_description, status).unwrap()
 }
 
 #[derive(Debug, PartialEq, Clone)]
